@@ -1,0 +1,36 @@
+ILIE DANA MARIA 
+-------------------------------------------------------------------------------
+
+Task 1:
+
+-Am memorat elementele citite intr-o matrice de tip int
+-Pentru a calcula suma elemetelor am parcurs pe rand prima si ultima linie, 
+respectiv prima si ultima coloana
+-Pe prima si ultima linie am facut suma tuturor bytes-ilor
+-Pe prima coloana am facuta suma primului byte(byte0) al fiecarui element(mai
+putin primul si ultimul)
+-Pe ultima coloana am facut suma ultimului byte(byte3) al fiecarui element(mai 
+putin primul si ultimul)
+
+-------------------------------------------------------------------------------
+
+Task 2:
+
+-Am facut cate o functie pentru fiecare operatie(modify, delete, swap)
+-Pentru functia modify am analizat atat cazul in care portiunea de date ce 
+trebuie corectata se afla in afara hartii(caz in care a fost necesara realocare
+memoriei), cat si cazul in care portiunea respectiva se afla in interiorul hartii
+-Pentru a realiza toate operatiile am folosit shiftarea pe bytes, selectand
+astfel din int byte-ul/bytes-ii care trebuie modificati 
+
+-------------------------------------------------------------------------------
+
+Task 3:
+
+-Am pus intr-o alta matrice de tipul unsigned char fiecare byte din matricea
+initiala de inturi
+-Am folosit o functie recursiva care, pentru fiecare element de 0 gasit verifica
+cate alte elemente de 0 sunt in stanga, dreapta, sus si jos si returneaza acest
+numar cand nu mai gaseste 0.
+-Fiecare element de 0 prin care trece este inlocuit cu 0xFF pentru a nu fi 
+numarat de mai multe ori.

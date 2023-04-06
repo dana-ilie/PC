@@ -1,0 +1,22 @@
+Problema 1 
+	-Pentru a evita memorarea sirului am lucrat doar cu 3 variabile echivalente cu cei 3 copaci care fac obiectul verificarii proprietatii de special, unde x_copac_0 = copacul anterior, x_copac_1 = copacul care se verifica, x_copac_2 = copacul urmator;
+	-Cele 3 variabile isi modifica valoarea pe masura ce se citeste un nou copac;
+	-Am citit separat primii 2 copaci intrucat acestia nu pot fi speciali;
+	
+Problema 2
+	-Cat timp nu s-a ajuns la o secventa de numere care se repeta calculam diferenta dintre numarul format cu cifrele in ordine descrescatoare si numarul format cu cifrele in ordine crescatoare;
+	-Am pus intr-un vector toate diferentele care nu se repeta;
+	-Daca o diferenta se repeta(este deja in vectorul diferentelor) algoritmul se opreste si sunt afisate rezultatele obtinute;
+	
+Problema 3
+	-Intr-un vector p am memorat cresterea punctajului care poate fi obtinuta la fiecare materie
+	-Am calculat punctajul total 
+	-Daca punctajul total este mai mic decat punctajul minim, se cauta in vectorul p punctajul maxim care se poate obtine in urma unei mariri
+	-La valoare punctajului total se adauga punctajul maxim respectiv, iar valoarea vectorului p de la pozitia pe care a fost gasit maximul devine 0 pentru a nu se obtine aceeasi marire de mai multe ori;
+	-Algoritmul se repeta cat timp punctajul total < punctajul minim si cat timp se mai pot efectua mariri
+	
+Problema 4
+	-Am salvat in cate o matrice restrictiile pentru linii si restrictiile pentru coloane 
+	-Inca de la citirea restrictiilor am realizat suma acestora si am stocat intr-un vector suma restrictiilor pentru linii(s1) si in alt vector suma pentru restrictiile pe coloane(s2)
+	-Apoi am facut suma fiecarei linii din nonograma, pe care am retinut-o in vectorul S1 si suma fiecarei coloane, pe care am reinut-o in vectorul S2
+	-Am comparat elementele din s1 cu cele din S1, respectiv s2 cu cele din S2

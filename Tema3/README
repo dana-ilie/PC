@@ -1,0 +1,42 @@
+ILIE DANA MARIA 314 CA
+-------------------------------------------------------------------------------
+- In main am gestionat comenzile primite, iar in functie de acestea am apelat o
+functie corespunzatoare care sa efectueze operatia ceruta
+-------------------------------------------------------------------------------
+- Daca se primeste LOAD se apeleaza functia load_image care citeste mai departe
+specificatiile imaginii(tipul, latime, inaltime, valoare maxima a intensitatii)
+- Din functia load_image se apeleaza read_pgm sau read_ppm(in functie de tipul
+imaginii), unde se aloca memorie si se citeste imaginea
+- Dupa ce se incarca in memoria programului imaginea, aceasta e selectata complet
+-------------------------------------------------------------------------------
+- Daca se primeste SELECT se apeleaza functia selectt, unde se verifica daca se
+primeste si ALL. Daca am primit SELECT ALL se apeleaza functia select_all, care 
+selecteaza toata imagine. In caz contrar, se citesc coordonatele x1, y1, x2, y2
+-------------------------------------------------------------------------------
+- Daca se primeste ROTATE se apeleaza rotate_manage unde se citeste unghiul. In
+functie de tipul selectiei curente(toata imaginea sau o selectie in functie de 
+coordonate) se apeleaza functia rotate_all sau rotate de cate ori este necesar
+- rotate face rotatia pe loc, in timp ce rotate_all aloca o noua matrice unde
+se salveaza datele rotite
+-------------------------------------------------------------------------------
+- Daca se primeste CROP se apeleaza functia crop, unde se aloca o noua matrice
+de dimensiunile selectiei in care se citesc datele imaginii din zona delimitata
+de coordonatele respective
+-------------------------------------------------------------------------------
+- Daca se primeste GRAYSCALE se apeleaza functia grayscale, unde se verifica 
+daca imagine curenta este una RGB. In caz afirmativ, modifica valorile fiecarui
+pixel conform formulei newRed = newGreen = newBlue = (red + green + blue) /3
+-------------------------------------------------------------------------------
+- Daca se primeste SEPIA se apeleaza functia sepia, unde se verifica daca ima-
+ginea este RGB. In cazul in care se poate aplica filtrul de sepia, se modifica
+pe rand valoarea fiecarui pixel.
+-------------------------------------------------------------------------------
+- Daca se primeste SAVE se apeleaza functia save, unde se citeste si numele fi-
+sierului in care sa se salveze imaginea. Apoi, daca nu se primeste argumentul
+ascii se apeleaza functia save_binary, care salveaza imaginea in format binar.
+Daca se primeste si argumentul ascii se apeleaza functia save_txt, care salveaza
+imaginea curenta in format ascii.
+-------------------------------------------------------------------------------
+- Daca se primeste EXIT se elibereaza memoria(in cazul in care exista o imagine
+incarcata) si se inchide programul;
+-------------------------------------------------------------------------------
